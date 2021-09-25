@@ -1,0 +1,58 @@
+body{
+    background: url(https://images.pexels.com/photos/3707669/pexels-photo-3707669.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat;
+    center fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 7%;
+}
+
+hr {
+    width: 80%;
+    margin-top: 6%;
+}
+
+.fb {
+    padding: 0.5rem 2rem;
+    background-color: #48526B
+    ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container input {
+    padding: 0.5rem;
+    width: 70%;
+}
+
+.container input[type=checkbox] {
+    width: auto;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    background-color: #4C5268
+    ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
