@@ -1,0 +1,139 @@
+/*:: before and ::after pseudo Elements  */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body Background and setting */
+body {
+    background: linear-gradient(#22c1c3, #fdbb2d);
+    /* Center the clock in the center of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* View height */
+    min-height: 100vh;
+    /* scroll bar */
+    overflow: hidden;
+}
+
+/* Set clock */
+.clock {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(225, 225, 225, .8);
+    /* .8 (80% transperecy */
+    /* Make the clock circle */
+    border-radius: 50%;
+    border: solid #000000;
+    position: relative;
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: red; (to Visualize) */
+    text-align: center;
+    /* In transform we can use the rotate properity */
+   /* transform: rotate(60deg); */
+   transform: rotate(var( --rotation));
+   font-size: 1.5rem;
+}
+
+/* Select indidvual numbers to rotate in deg */
+.clock .number1 {
+    --rotation: 30deg
+}
+
+.clock .number2 {
+    --rotation: 60deg
+}
+
+.clock .number3 {
+    --rotation: 90deg
+}
+
+.clock .number4 {
+    --rotation: 120deg
+}
+
+.clock .number5 {
+    --rotation: 150deg
+}
+
+.clock .number6 {
+    --rotation: 180deg
+}
+
+.clock .number7 {
+    --rotation: 210deg
+}
+
+.clock .number8 {
+    --rotation: 240deg
+}
+
+.clock .number9 {
+    --rotation: 270deg
+}
+
+.clock .number10 {
+    --rotation: 300deg
+}
+
+.clock .number11 {
+    --rotation: 330deg
+}
+
+/* Set clock hands */
+.clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: #F2C94C;
+    border: 1px solid #1CB5E0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    /* Overlapping elements */
+    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
+}
+
+/* Black circle in the center */
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: #6f0000;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+
+.clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: #66ff00;
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: #eacda3;
+}
